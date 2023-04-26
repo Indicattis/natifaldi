@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600;700&display=swap');
+
+$background--color: #fff3e8;
+$border--color: #593e34;
+$base--color: #11141d;
+$sec--color: #926f65;
+$dark--color: #cf1b2b;
+* {
+    padding: 0;
+    font-family: 'Figtree', sans-serif;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    overflow: hidden;
+    background-color: $background--color;
+}
+main {
+    width: 80%;
+}
+// header
+
+header {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.menu--subtitle {
+    display: flex;
+}
+.nz--banner {
+    max-width: 50px;
+}
+header nav {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+.menu--itens {
+    width: 60%;
+}
+header nav .menu--item {
+    padding: 5px;
+    cursor: pointer;
+    color: $base--color;
+}
+.menu--midias {
+    width: 15%;
+}
+section .sec--intro {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    background-color: $base--color;
+}
+
+.intro--logo {
+    z-index: 1;
+}
+.intro--background {
+    position: absolute;
+    z-index: 0;
+    filter: blur(3px);
+}
