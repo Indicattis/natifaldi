@@ -46,7 +46,7 @@ header {
   background-color: #4285F4;
   width: 70%;
   border-radius: 50px;
-  box-shadow: 0 1px 5px 0 #022873;
+  border: 1px solid #b8b8b8;
 }
 
 .menu--navbar .menu--item {
