@@ -12,15 +12,29 @@
 <body>
     <header>
         <nav class="menu--navbar">
-            <div class="menu--item icon"><i class="fa-solid fa-earth-oceania"></i></div>
-            <button class="button--default">sign in </button>
-            <button class="button--default"> login</button> 
+            <div>
+                <div class="menu--item icon"><i class="fa-solid fa-earth-oceania"></i></div>
+                <div class="menu--item title">Natali Faldi</div>
+            </div>
+            <div>
+                <a class="button--default">sign in </a>
+                <a class="button--default"> login</a> 
+            </div>
         </nav>
         <nav class="menu--navbar options">
+            <div class="menu--item search--box">
+                <div class="search--ico" onclick="openSearch();">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="search--input">
+                    <input type="text" placeholder="search">
+                </div>
+            </div>
             <div class="menu--item">Home</div>
             <div class="menu--item">About</div>
             <div class="menu--item">Galery</div>
             <div class="menu--item">Locations</div>
+            <div class="menu--item dropdown--toggle"><i class="fa-solid fa-ellipsis-vertical"></i></div>
         </nav>
         <nav class="mobile--navbar">
             <div class="menu--item menu--toggle"><i class="fa-solid fa-bars-staggered"></i></div>
@@ -41,8 +55,58 @@
             </div>
     </section>
     </header>
-    
-    
+    <main>
+        <section class="sec--trend">
+            <legend class="trend--title"><i class="fa-solid fa-chart-simple"></i> Trending</legend>
+            <div class="trend--showcase">
+                <div class="trend--item">
+                    <legend><i class="fa-solid fa-location-dot"></i> Patagonia Chocolates </legend>
+                    <img class="trend--item--img" src="./img/backgrounds/gl--01.PNG" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque repudiandae ex accusamus nisi, repellat magni incidunt! Sed illum minima sunt iure, nesciunt alias incidunt debitis voluptates? Id aliquid ex nihil.</p>
+                </div>
+                
+                <div class="trend--item">
+                    <legend><i class="fa-solid fa-location-dot"></i> Patagonia Chocolates </legend>
+                    <img class="trend--item--img" src="./img/backgrounds/gl--02.PNG" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque repudiandae ex accusamus nisi, repellat magni incidunt! Sed illum minima sunt iure, nesciunt alias incidunt debitis voluptates? Id aliquid ex nihil.</p>
+                </div>
+
+                <div class="trend--item">
+                    <legend><i class="fa-solid fa-location-dot"></i> Patagonia Trees </legend>
+                    <img class="trend--item--img" src="./img/backgrounds/gl--03.PNG" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque repudiandae ex accusamus nisi, repellat magni incidunt! Sed illum minima sunt iure, nesciunt alias incidunt debitis voluptates? Id aliquid ex nihil.</p>
+                </div>
+                
+                <div class="trend--item">
+                    <legend><i class="fa-solid fa-location-dot"></i> New Zealand Lagnu </legend>
+                    <img class="trend--item--img" src="./img/backgrounds/gl--04.PNG" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque repudiandae ex accusamus nisi, repellat magni incidunt! Sed illum minima sunt iure, nesciunt alias incidunt debitis voluptates? Id aliquid ex nihil.</p>
+                </div>
+
+                <div class="trend--item">
+                    <legend><i class="fa-solid fa-location-dot"></i> Chesterfield City</legend>
+                    <img class="trend--item--img" src="./img/backgrounds/gl--05.PNG" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque repudiandae ex accusamus nisi, repellat magni incidunt! Sed illum minima sunt iure, nesciunt alias incidunt debitis voluptates? Id aliquid ex nihil.</p>
+                </div>
+
+                <div class="trend--item">
+                    <legend><i class="fa-solid fa-location-dot"></i> NZ Beach</legend>
+                    <img class="trend--item--img" src="./img/backgrounds/gl--06.PNG" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque repudiandae ex accusamus nisi, repellat magni incidunt! Sed illum minima sunt iure, nesciunt alias incidunt debitis voluptates? Id aliquid ex nihil.</p>
+                </div>
+
+                <div class="trend--item">
+                    <legend><i class="fa-solid fa-location-dot"></i> Arrowtown</legend>
+                    <img class="trend--item--img" src="./img/backgrounds/gl--07.PNG" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque repudiandae ex accusamus nisi, repellat magni incidunt! Sed illum minima sunt iure, nesciunt alias incidunt debitis voluptates? Id aliquid ex nihil.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/jquery-1.11.0.min.js"></script>
+    <script src="./js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

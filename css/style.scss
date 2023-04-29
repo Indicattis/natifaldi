@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 $background--color: #F2F2F2;
 $border--color: #b8b8b8;
@@ -11,25 +12,42 @@ $red--color: #CC142B;
     margin: 0 auto;
     box-sizing: border-box;
 }
+a {
+    text-decoration: none;
+}
 html {
     font-size: 62.5%;
-}
-body {
-    overflow: hidden;
 }
 main {
     width: 70%;
 }
-
+//*****************************MIXIN*********************************//
 @mixin button--default {
     background-color: transparent;
     color: $background--color;
-    padding: 10px 10px;
     font-size: 2rem;
     border: none;
     border: 1px solid $border--color;
-    border-radius: 3px;
+    border-radius: 50px;
     cursor: pointer;
+    padding: 0px 10px;
+    height: 42px;
+}
+@mixin button--default--hover {
+    color: $red--color;
+    border: 1px solid $red--color;
+    transition: all .2s;
+}
+@mixin ahref--default {
+    color: $background--color;
+    border-bottom: 1px solid transparent;
+    padding: 5px;
+    cursor: pointer;
+}
+@mixin ahref--default--hover {
+    border-bottom: 1px solid $border--color;
+    color: $border--color;
+    transition: all 0.2s;
 }
 // header
 header {
@@ -41,24 +59,33 @@ header {
     display: flex;
     flex-direction: column;
     position: relative;
-    background-image: url(../img/backgrounds/bg--section.jpg);
+    background-image: url(../img/backgrounds/bg--section--03.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    border-bottom: 5px solid $dark--color;
 }
 .menu--navbar {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 70%;
     align-content: flex-start;
     justify-content: center;
     height: 50px;
+    width: 600px;
+    align-content: space-between
+}
+.menu--navbar div {
+    display: flex;
+    align-items: center;
 }
 .menu--navbar.options {
-    background-color: $base--color;
-    width: 70%;
+    background-color: transparent;
+    width: 600px;
     border-radius: 50px;
-    border: 1px solid $border--color;
+    align-content: flex-start;
+    position: relative;
+    // box-shadow: 1px 0px 5px 1px $background--color;
+    border: 1px solid $background--color;
 }
 .menu--navbar .menu--item {
     padding: 10px;
@@ -68,10 +95,62 @@ header {
     margin-left: 10px;
 }
 .menu--navbar .menu--item.icon {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
+}
+.menu--navbar .menu--item.title, b {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+}
+.menu--navbar a {
+    @include ahref--default();
+}
+.menu--navbar a:hover {
+    @include ahref--default--hover();
+}
+.menu--item.search--box {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    border-radius: 50px;
+    transition: all .3s;
+    max-width: 50%;
+}
+.menu--item.search--box .search--ico {
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    left: 0;
+}
+.menu--item.search--box .search--input  input{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    left: 50px;
+    height: 40px;
+    width: 100%;
+    top: 0;
+    outline: none;
+    font-size: 1.6rem;
+}
+.menu--item.search--box.active {
+    width: 35%;
+    background-color: $background--color;
+    transition: all .3s;
+}
+.menu--item.search--box.active .search--ico {
+    color: $base--color;
+}
+.menu--item.dropdown--toggle {
+    position: absolute;
+    right: 5px;
+}
+.mobile--navbar{
+
+    display: none;
 }
 .menu--item.menu--toggle {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -86,20 +165,25 @@ header {
 
 .sec--perfil {
     margin-top: 50px;
-    width: 80%;
+    width: 50%;
+    min-width: 650px;
     display: flex;
+    padding: 3px;
+    border-radius: 5px;
 }
 .sec--perfil .perfil--img--case img {
-    border: 1px dashed $dark--color;
+    box-shadow: 0 1px 5px 0 $base--color;
     padding: 3px;
     border-radius: 50%;
 }
 .perfil--desc--case {
     padding: 10px;
     line-height: 30px;
-    background-color: $dark--color;
-    opacity: 0.7;
+    opacity: 0.8;
     border-radius: 20px 20px 20px 0px;
+    background-color: $dark--color;
+    height: fit-content;
+    width: 400px;
 }
 .perfil--links--case {
     display: flex;
@@ -130,11 +214,71 @@ header {
     @include button--default();
     margin: 10px;
 }
+// 
+// 
+// 
+.sec--trend {
+    margin-top: 10px;
+}
+.sec--trend .trend--title{
+    font-size: 3rem;
+    padding: 10px;
+    width: 100%;
+    color: $dark--color;
+    font-family: 'Dancing Script', cursive;
+}
+.trend--showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+}
+.trend--item {
+    background-color: transparent;
+    box-shadow: 0 1px 5px 0 $border--color;
+    color: $background--color;
+    font-size: 1.8rem;
+    max-width: 260px;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    max-height: 450px;
+}
+.trend--item legend {
+    position: absolute;
+    padding: 10px;
+    background-color: #b8b8b879;
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+}
+.trend--item i {
+    color: $red--color;
+}
+.trend--item--img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+.trend--item p {
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: -100px;
+    background-color: #b8b8b879;
+    transition: all .3s;
+}
+.trend--item:hover p {
+    bottom: 0;
+    transition: all .3s;
+}
+// 
+// 
+// 
+
+
 @media (max-width: 746px) {
     .menu--navbar, .network--navbar {
         display: none;
     }
-    .menu--item.menu--toggle {
+    .mobile--navbar {
         display: block;
     }
 }
