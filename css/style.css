@@ -15,12 +15,7 @@ html {
   font-size: 62.5%;
 }
 
-main {
-  width: 70%;
-}
-
 header {
-  width: 100vw;
   height: 50vh;
   background-color: #4285F4;
   color: #F2F2F2;
@@ -165,12 +160,26 @@ header {
 .perfil--desc--case {
   padding: 10px;
   line-height: 30px;
-  opacity: 0.8;
   border-radius: 20px 20px 20px 0px;
-  background-color: #022873;
+  background-color: rgba(2, 40, 115, 0.3137254902);
   height: -moz-fit-content;
   height: fit-content;
   width: 400px;
+}
+
+.perfil--desc--numbers button {
+  background-color: transparent;
+  color: #F2F2F2;
+  font-size: 2rem;
+  border: none;
+  border: 1px solid #b8b8b8;
+  border-radius: 50px;
+  cursor: pointer;
+  padding: 0px 10px;
+  height: 42px;
+  min-width: 42px;
+  font-size: 1.4rem;
+  height: 30px;
 }
 
 .perfil--links--case {
@@ -213,11 +222,13 @@ header {
   cursor: pointer;
   padding: 0px 10px;
   height: 42px;
+  min-width: 42px;
   margin: 10px;
 }
 
 .sec--trend {
   margin-top: 10px;
+  width: 70%;
 }
 
 .sec--trend .trend--title {
@@ -244,7 +255,7 @@ header {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  max-height: 450px;
+  max-height: 420px;
 }
 
 .trend--item legend {
@@ -264,17 +275,169 @@ header {
   border-radius: 5px;
 }
 
-.trend--item p {
+.trend--item .trend--options {
   font-size: 1.2rem;
   position: absolute;
+  width: 100%;
   bottom: -100px;
-  background-color: rgba(184, 184, 184, 0.4745098039);
+  display: flex;
+  align-items: center;
+  background-color: transparent;
   transition: all 0.3s;
 }
 
-.trend--item:hover p {
-  bottom: 0;
+.trend--item .trend--options button {
+  background-color: transparent;
+  color: #F2F2F2;
+  font-size: 2rem;
+  border: none;
+  border: 1px solid #b8b8b8;
+  border-radius: 50px;
+  cursor: pointer;
+  padding: 0px 10px;
+  height: 42px;
+  min-width: 42px;
+  color: #F2F2F2;
+  width: 40px;
+}
+
+.trend--item .trend--options button i {
+  color: #F2F2F2;
+}
+
+.trend--item:hover .trend--options {
+  bottom: 5px;
   transition: all 0.3s;
+}
+
+.sec--about {
+  margin-top: 30px;
+  display: flex;
+}
+
+.about--case {
+  height: 100vh;
+  width: 50%;
+}
+
+.about--case.left {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.about--case.left img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about--case.right {
+  background-image: url(../img/backgrounds/banner-11.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.about--case.left .about--map--img {
+  width: 100%;
+}
+
+.about--form--box {
+  background-color: rgba(184, 184, 184, 0.4745098039);
+  color: #F2F2F2;
+  font-size: 1.8rem;
+  padding: 10px;
+  border-radius: 3px;
+  width: 40%;
+  box-shadow: 0 1px 5px 0 #b8b8b8;
+}
+
+.about--form--box form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.about--form--box form input, textarea {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  outline: none;
+  border: 1px solid #F2F2F2;
+  padding: 10px;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.about--form--box form button {
+  background-color: transparent;
+  color: #F2F2F2;
+  font-size: 2rem;
+  border: none;
+  border: 1px solid #b8b8b8;
+  border-radius: 50px;
+  cursor: pointer;
+  padding: 0px 10px;
+  height: 42px;
+  min-width: 42px;
+  background-color: rgba(2, 40, 115, 0.8352941176);
+  margin-top: 5px;
+}
+
+footer {
+  margin-top: 100px;
+  background-color: #4285F4;
+  color: #F2F2F2;
+}
+
+.footer--header, .footer--footer {
+  background-color: #022873;
+}
+
+.footer--text {
+  width: 70%;
+}
+
+.footer--content {
+  width: 70%;
+  font-size: 1.4rem;
+  display: flex;
+}
+
+.footer--content--col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer--content--col div {
+  color: #F2F2F2;
+  border-bottom: 1px solid transparent;
+  padding: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.footer--content--col div:hover {
+  border-bottom: 1px solid #b8b8b8;
+  color: #b8b8b8;
+  transition: all 0.2s;
+}
+
+.footer--content--col button {
+  background-color: transparent;
+  color: #F2F2F2;
+  font-size: 2rem;
+  border: none;
+  border: 1px solid #b8b8b8;
+  border-radius: 50px;
+  cursor: pointer;
+  padding: 0px 10px;
+  height: 42px;
+  min-width: 42px;
+  margin: 5px;
 }
 
 @media (max-width: 746px) {
