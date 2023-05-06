@@ -30,8 +30,8 @@
                     <input type="text" placeholder="search">
                 </div>
             </div>
-            <div class="menu--item">Home</div>
-            <div class="menu--item">About</div>
+            <div class="menu--item" id="header--toggle--1">Home</div>
+            <div class="menu--item" id="header--toggle--2">About</div>
             <div class="menu--item">Galery</div>
             <div class="menu--item">Locations</div>
             <div class="menu--item dropdown--toggle"><i class="fa-solid fa-ellipsis-vertical"></i></div>
@@ -39,28 +39,33 @@
         <nav class="mobile--navbar">
             <div class="menu--item menu--toggle"><i class="fa-solid fa-bars-staggered"></i></div>
         </nav>
-        <section class="sec--perfil">
-            <div class="perfil--img--case">
-                <img src="./img/natali--perfil.PNG" alt="">
-            </div>
-            <div class="perfil--desc--case">
-                <h4><b>Nátali Faldi 🌼</b></h4>
-                <p>🍂21y</p>
-                <p><i>Influencer</i></p>
-                <p><i>artist</i></p> 
-                <p>🇧🇷🇳🇿</p> 
-                <div class="perfil--desc--numbers">
-                    <button>95 pub</button>
-                    <button>14460 followers</button>
+        <div class="sec--header--slider">
+            <div class="slider--item perfil" id="slider--item--2">
+                <div class="perfil--img--case">
+                    <img src="./img/natali--perfil.PNG" alt="">
+                </div>
+                <div class="perfil--desc--case">
+                    <h4><b>Nátali Faldi 🌼</b></h4>
+                    <p>🍂21y</p>
+                    <p><i>Influencer</i></p>
+                    <p><i>artist</i></p> 
+                    <p>🇧🇷🇳🇿</p> 
+                    <div class="perfil--desc--numbers">
+                        <button>95 pub</button>
+                        <button>14460 followers</button>
+                    </div>
+                </div>
+                <div class="perfil--links--case">
+                    <button class="perfil--instagram"><i class="fa-brands fa-instagram"></i></button>
+                    <button class="perfil--tiktok"><i class="fa-brands fa-tiktok"></i></button>
+                    <button class="perfil--youtube"><i class="fa-brands fa-youtube"></i></button>
+                    <button class="perfil--snapchat"><i class="fa-brands fa-snapchat"></i></button>
                 </div>
             </div>
-            <div class="perfil--links--case">
-                <button class="perfil--instagram"><i class="fa-brands fa-instagram"></i></button>
-                <button class="perfil--tiktok"><i class="fa-brands fa-tiktok"></i></button>
-                <button class="perfil--youtube"><i class="fa-brands fa-youtube"></i></button>
-                <button class="perfil--snapchat"><i class="fa-brands fa-snapchat"></i></button>
+            <div class="slider--item video" id="slider--item--1">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/StnXLcpDaRs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-    </section>
+        </div>
     </header>
     <main>
         <section class="sec--trend">
@@ -135,13 +140,20 @@
                         <button class="perfil--tiktok"><i class="fa-solid fa-share-nodes"></i></button>
                     </div>
                 </div>
+
+                <div class="trend--item">
+                    <legend><i class="fa-solid fa-location-dot"></i> Arrowtown</legend>
+                    <img class="trend--item--img" src="./img/backgrounds/gl--08.PNG" alt="">
+                    <div class="trend--options">
+                        <button class="perfil--instagram"><i class="fa-brands fa-instagram"></i></button>
+                        <div><b>NatPhoto</b> </div>
+                        <button class="perfil--tiktok"><i class="fa-solid fa-share-nodes"></i></button>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="sec--about">
-            <div class="about--case left">
-                <img class="about--map--img" src="./img/backgrounds/map--01.png" alt="">
-            </div>
-            <div class="about--case right">
+            <div class="about--case">
                 <div class="about--form--box">
                     <form action="">
                         <legend>Tell me one curiosity</legend>

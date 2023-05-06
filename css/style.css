@@ -23,10 +23,8 @@ header {
   display: flex;
   flex-direction: column;
   position: relative;
-  background-image: url(../img/backgrounds/bg--section--03.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   border-bottom: 5px solid #022873;
+  overflow: hidden;
 }
 
 .menu--navbar {
@@ -38,6 +36,7 @@ header {
   height: 50px;
   width: 600px;
   align-content: space-between;
+  z-index: 2;
 }
 
 .menu--navbar div {
@@ -142,16 +141,32 @@ header {
   cursor: pointer;
 }
 
-.sec--perfil {
-  margin-top: 50px;
-  width: 50%;
-  min-width: 650px;
-  display: flex;
-  padding: 3px;
-  border-radius: 5px;
+.sec--header--slider {
+  z-index: 0;
+  width: 100vw;
+  position: absolute;
+  height: 50vh;
 }
 
-.sec--perfil .perfil--img--case img {
+.slider--item {
+  width: 50%;
+  min-width: 650px;
+  height: 50vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 3px;
+  background-size: cover;
+}
+
+.slider--item.perfil {
+  background-image: url(../img/backgrounds/bg--section.jpg);
+  position: absolute;
+  transition: all 0.4s;
+}
+
+.slider--item.perfil .perfil--img--case img {
   box-shadow: 0 1px 5px 0 #4285F4;
   padding: 3px;
   border-radius: 50%;
@@ -224,6 +239,16 @@ header {
   height: 42px;
   min-width: 42px;
   margin: 10px;
+}
+
+.slider--item.video {
+  background-image: url(../img/backgrounds/bg--section--02);
+  position: absolute;
+  transition: all 0.4s;
+}
+
+.slider--item.video iframe {
+  margin-top: 50px;
 }
 
 .sec--trend {
@@ -316,32 +341,15 @@ header {
 }
 
 .about--case {
-  height: 100vh;
-  width: 50%;
-}
-
-.about--case.left {
-  display: flex;
-  align-items: center;
-  background-color: transparent;
-}
-
-.about--case.left img {
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.about--case.right {
+  height: 80vh;
+  width: 600px;
+  border-radius: 10px;
+  box-shadow: 3px 5px 5px 3px #b8b8b8;
   background-image: url(../img/backgrounds/banner-11.JPG);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
-}
-
-.about--case.left .about--map--img {
-  width: 100%;
 }
 
 .about--form--box {
@@ -350,7 +358,7 @@ header {
   font-size: 1.8rem;
   padding: 10px;
   border-radius: 3px;
-  width: 40%;
+  width: 70%;
   box-shadow: 0 1px 5px 0 #b8b8b8;
 }
 

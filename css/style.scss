@@ -59,10 +59,8 @@ header {
     display: flex;
     flex-direction: column;
     position: relative;
-    background-image: url(../img/backgrounds/bg--section--03.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     border-bottom: 5px solid $dark--color;
+    overflow: hidden;
 }
 .menu--navbar {
     display: flex;
@@ -72,7 +70,8 @@ header {
     justify-content: center;
     height: 50px;
     width: 600px;
-    align-content: space-between
+    align-content: space-between;
+    z-index: 2;
 }
 .menu--navbar div {
     display: flex;
@@ -163,15 +162,33 @@ header {
 // 
 // 
 
-.sec--perfil {
-    margin-top: 50px;
+.sec--header--slider {
+    z-index: 0;
+    width: 100vw;
+    position: absolute;
+    height: 50vh;
+}
+
+//
+//
+//
+.slider--item {
     width: 50%;
     min-width: 650px;
+    height: 50vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
     display: flex;
     padding: 3px;
-    border-radius: 5px;
+    background-size: cover;
 }
-.sec--perfil .perfil--img--case img {
+.slider--item.perfil {
+    background-image: url(../img/backgrounds/bg--section.jpg);
+    position: absolute;
+    transition: all 0.4s;
+}
+.slider--item.perfil .perfil--img--case img {
     box-shadow: 0 1px 5px 0 $base--color;
     padding: 3px;
     border-radius: 50%;
@@ -218,6 +235,17 @@ header {
     @include button--default();
     margin: 10px;
 }
+
+
+.slider--item.video {
+    background-image: url(../img/backgrounds/bg--section--02);
+    position: absolute;
+    transition: all 0.4s;
+}
+.slider--item.video iframe {
+    margin-top: 50px;
+}
+
 // 
 // 
 // 
@@ -294,27 +322,15 @@ header {
     display: flex;
 }
 .about--case {
-    height:100vh;
-    width: 50%;
-}
-.about--case.left {
-    display: flex;
-    align-items: center;
-    background-color: transparent
-}
-.about--case.left img {
-    height: 100%;
-    object-fit: cover;
-}
-.about--case.right {
+    height:80vh;
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px 3px $border--color;
     background-image: url(../img/backgrounds/banner-11.JPG);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
-}
-.about--case.left .about--map--img {
-    width: 100%;
 }
 .about--form--box {
     background-color: #b8b8b879;
@@ -322,7 +338,7 @@ header {
     font-size: 1.8rem;
     padding: 10px;
     border-radius: 3px;
-    width: 40%;
+    width: 70%;
     box-shadow: 0 1px 5px 0 $border--color;
 }
 .about--form--box form {
